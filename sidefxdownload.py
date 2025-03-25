@@ -17,11 +17,11 @@ if __name__ == '__main__':
     # Retrieve the daily builds list, if you want the latest production
     # you can skip this step
     releases_list = service.download.get_daily_builds_list(
-        product='houdini', version='20.0', platform='linux')
+        product='houdini', version='20.5.410', platform='linux')
 
     # Retrieve the latest daily build available
     latest_release = service.download.get_daily_build_download(
-        product='houdini', version='20.0', build=releases_list[0]['build'], platform='linux')
+        product='houdini', version='20.5.410', build=releases_list[0]['build'], platform='linux')
 
     # Download the file
     local_filename = latest_release['filename']
